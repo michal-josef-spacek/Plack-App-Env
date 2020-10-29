@@ -20,8 +20,7 @@ readme_from 'Env.pm';
 recursive_author_tests('xt');
 requires 'Data::Printer' => 0;
 requires 'Plack::Component' => 0;
-resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
-	'?Name=Plack-App-Env';
+resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Plack-App-Env/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Plack-App-Env';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Plack-App-Env';
 test_requires 'Error::Pure' => 0;
