@@ -1,4 +1,5 @@
 0.04
+ - Fix test (psgi.errors has different values).
 
 0.03 2020-10-29T16:05:46+01:00
  - Add test.

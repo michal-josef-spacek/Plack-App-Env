@@ -16,7 +16,7 @@ my $right_ret = <<'END';
     CONTENT_LENGTH      0,
     HTTP_HOST           "localhost",
     PATH_INFO           "/",
-    psgi.errors         *main::STDERR  (write-only, layers: unix perlio),
+    psgi.errors         ?,
     psgi.input          *HTTP::Message::PSGI::$input  (layers: scalar),
     psgi.multiprocess   "",
     psgi.multithread    "",
@@ -42,4 +42,5 @@ my $right_ret = <<'END';
 END
 my $ret = $res->content;
 $ret =~ s/(REMOTE_PORT\s+)\d+/$1\?/ms;
+$ret =~ s/(psgi.errors\s+).*,\n/$1\?,\n/;
 is($ret, $right_ret, 'Get main page.');
