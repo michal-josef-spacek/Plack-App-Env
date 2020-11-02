@@ -43,4 +43,5 @@ END
 my $ret = $res->content;
 $ret =~ s/(REMOTE_PORT\s+)\d+/$1\?/ms;
 $ret =~ s/(psgi.errors\s+).*,\n/$1\?,\n/;
+$ret =~ s/(REMOTE_ADDR\s+"127.0.0.1").*,\n/$1,\n/;
 is($ret, $right_ret, 'Get main page.');
