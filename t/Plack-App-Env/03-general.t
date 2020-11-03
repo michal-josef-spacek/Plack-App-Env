@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 
+use CPAN::Version;
 use HTTP::Request;
 use Plack::App::Env;
 use Plack::Test;
@@ -40,6 +41,9 @@ my $right_ret = <<'END';
     SERVER_PROTOCOL     "HTTP/1.1"
 }
 END
+if (CPAN::Version->vgt($Data::Printer::VERSION, '0.40')) {
+	$right_ret =~ s/^\\\ //ms;
+}
 my $ret = $res->content;
 $ret =~ s/(REMOTE_PORT\s+)\d+/$1\?/ms;
 $ret =~ s/(psgi.errors\s+).*,\n/$1\?,\n/;
