@@ -1,6 +1,7 @@
 TODO
 ====
 1. Vystup v HTML
+Rewrite to Plack::App::Data::Printer?
 3.
 
 Applied
