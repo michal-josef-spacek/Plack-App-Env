@@ -6,7 +6,7 @@ use warnings;
 
 use Data::Printer;
 
-our $VERSION = 0.09;
+our $VERSION = 0.10;
 
 sub call {
 	my ($self, $env) = @_;
@@ -139,6 +139,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.09
+0.10
 
 =cut
