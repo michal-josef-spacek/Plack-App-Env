@@ -69,6 +69,8 @@ Returns Plack::Component object.
 
 =head1 EXAMPLE
 
+=for comment filename=plack_app_env.pl
+
  use strict;
  use warnings;
 
